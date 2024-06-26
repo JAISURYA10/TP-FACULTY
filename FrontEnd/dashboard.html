@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Vertical Side Navigation Bar -->
+        <nav class="side-nav">
+            <ul>
+                <li><a href="#" id="batch2024" onclick="displayBatch('2020-2024')">Batch 20-24</a></li>
+                <li><a href="#" id="batch2125" onclick="displayBatch('2021-2025')">Batch 21-25</a></li>
+                <li><a href="#" id="batch2226" onclick="displayBatch('2022-2026')">Batch 22-26</a></li>
+                <li><a href="#" id="batch2327" onclick="displayBatch('2023-2027')">Batch 23-27</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="topnav">
+                <input type="text" placeholder="Search.." id="searchInput">
+                <button onclick="toggleTheme()">Change Theme</button>
+                <button onclick="toggleSurveyForm()">Add Feedback</button>
+            </div>
+            <div class="survey-container hidden">
+                <h2>Student Satisfaction Survey</h2>
+                <form id="surveyForm">
+                    <!-- Survey questions will be dynamically added here -->
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <!-- Pie graphs container -->
+            <div class="pie-graphs hidden">
+                <!-- Pie graphs will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
